@@ -6,7 +6,23 @@
         xmlns:local="clr-namespace:Negozio_Magazzino"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid RenderTransformOrigin="0.492,0.464" Margin="0,0,0,-1">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFFF8B00" Offset="0"/>
+                <GradientStop Color="Red" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button Name="btnAggiungi" HorizontalAlignment="Left" Height="49" Margin="148,250,0,0" VerticalAlignment="Top" Width="162" FontSize="20" Click="Button_Click" BorderBrush="Black" Background="White" Content="Aggiungi"/>
+        <TextBox Name="txtProdotto" HorizontalAlignment="Left" Height="140" Margin="7,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="18" BorderBrush="Black"/>
+        <TextBox Name="txtPrezzo" HorizontalAlignment="Left" Height="140" Margin="265,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="18" Background="White" BorderBrush="Black"/>
+        <TextBlock HorizontalAlignment="Left" Height="52" Margin="7,14,0,0" TextWrapping="Wrap" Text="Aggiungi il prodotto" VerticalAlignment="Top" Width="162" FontWeight="Bold" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Height="52" Margin="265,14,0,0" TextWrapping="Wrap" Text="Aggiungi il prezzo" VerticalAlignment="Top" Width="162" FontWeight="Bold" FontSize="16"/>
+        <Label Name="lblRisultato" Content="" HorizontalAlignment="Left" Margin="445,14,0,0" VerticalAlignment="Top" Width="325" Height="285" Background="White" FontSize="16" BorderBrush="Black"/>
+
     </Grid>
 </Window>
