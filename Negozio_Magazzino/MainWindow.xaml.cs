@@ -23,17 +23,18 @@ namespace Negozio_Magazzino
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string prodotto = txtProdotto.Text;
             double costo = double.Parse(txtPrezzo.Text);
             lblRisultato.Content += $"PRODOTTO: {prodotto}, PREZZO: {costo}\n";
-            StreamWriter sw = new StreamWriter("pubblica.Text", true);
+            using (StreamWriter t = new StreamWriter("txtfile", true));
             {
-                sw.WriteLine($"PRODOTTO: {prodotto}, PREZZO: {costo} \n");
+                t.WriteLine($"PRODOTTO: {prodotto}, PREZZO: {costo} \n");
             }
         }
     }
